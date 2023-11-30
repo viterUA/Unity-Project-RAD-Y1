@@ -17,6 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0));
-        edAnimations.SetBool("shouldWave", true);
+        {
+            edAnimations.SetBool("wave", true);
+        }
     }
 }
