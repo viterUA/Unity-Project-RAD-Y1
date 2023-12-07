@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
-    float timer = 5;
+    float Timer = 5;
     // Start is called before the first frame update
     void Start()
     {
