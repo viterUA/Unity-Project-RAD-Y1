@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class BomberGuyScript : MonoBehaviour
 {
-    public GameObject bombCLoneTemplate;
+   
     private float rotSpeed = 360;
     private float currentSpeed = 3; 
+
+    public GameObject bombCLoneTemplate;
     // Start is called before the first frame update
     void Start()
     {

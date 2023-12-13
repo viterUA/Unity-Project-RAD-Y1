@@ -7,11 +7,7 @@ public class CharacterControlScript : MonoBehaviour
     Rigidbody rb;
     Vector3 velocity, acceleration;
     float rateOfRotation = 180f;
-    public float normalSpeed = 25f;
-    public float accelerationSpeed = 45f;
-    public float rotationSpeed = 2.0f;
     float rotation = 0;
-    float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +28,13 @@ public class CharacterControlScript : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         { rb.AddForce(-transform.forward); }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
         {
-            rotation = -1;
+            { transform.Rotate(Vector3.up, rateOfRotation * Time.deltaTime); };
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.A))
         {
-            rotation = 1;
+            { transform.Rotate(Vector3.down, rateOfRotation * Time.deltaTime); };
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
