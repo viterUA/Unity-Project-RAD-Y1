@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
-    float Timer = 5;
+    float Timer = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +24,13 @@ public class Explode : MonoBehaviour
 
     private void explode()
     {
-        Collider[] victims = Physics.OverlapSphere(transform.position, 10);
+        Collider[] victims = Physics.OverlapSphere(transform.position, 100);
 
         foreach (Collider victim in victims)
         {
             Rigidbody rb_victim = victim.GetComponent<Rigidbody>();
             if (rb_victim != null)
-                rb_victim.AddExplosionForce(2000, transform.position, 10);
+                rb_victim.AddExplosionForce(2000, transform.position, 1000);
         }
     }
 }

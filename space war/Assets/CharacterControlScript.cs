@@ -7,7 +7,7 @@ public class CharacterControlScript : MonoBehaviour
     Rigidbody rb;
     Vector3 velocity, acceleration;
     float rateOfRotation = 180f;
-    float rotation = 0;
+    float speed = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class CharacterControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position += transform.forward * speed * Time.deltaTime;
         acceleration = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
